@@ -825,7 +825,7 @@ static int process_udp( n2n_sn_t * sss,
     idx = 0; /* marches through packet header as parts are decoded. */
     if ( decode_common(&cmn, udp_buf, &rem, &idx) < 0 )
     {
-        traceEvent( TRACE_ERROR, "Failed to decode common section" );
+        traceEvent( TRACE_DEBUG, "Failed to decode common section" );
         return -1; /* failed to decode packet */
     }
 
